@@ -1,0 +1,85 @@
+
+
+
+ul {list-style: none;position: absolute;}
+li {display: inline-block;margin-left: 15px;}
+
+input[type="radio"]{
+    display: none;
+}
+span {
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid #d5d5d5;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+}
+span::before{
+    position: absolute;
+    content: "";
+    background-color: #e42442;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: 50%;
+    display: none;
+    -webkit-transform : translate (-50%,-50%);
+    transform: translate(-50%,50%);
+}
+
+input[type="radio"]:checked + span::before {
+    display: block;
+}
+
+
+
+
+
+
+
+_____checkbox________
+
+input[type=checkbox] + label {
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label::before {
+    content: "\2714";
+    border: 2px solid #2a2a2a;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    display: inline-block;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 15px;
+    vertical-align: middle;
+    color: transparent;
+    transition: .2s;
+    
+}
+input[type=checkbox]:checked + label::before {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #2a2a2a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
